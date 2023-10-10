@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Workout Details</title>
+</head>
+<body>
+  <header>
+    <h1>Workout Details</h1>
+  </header>
+  
+  <main>
+    <% if (Exercises.length > 0) { %>
+        <table class="table"
+          <tr>
+            <th>Name</th>
+            <th>description</th>
+            <th>Sets</th>
+            <th>reps</th>
+            <th colspan="2"></th>
+          </tr>
+          <% Exercises.forEach(function(exercise){ %>
+            <tr>
+              <td><%= exercise.name %></td>
+              <td><%= exercise.description %></td>
+              <td><%= exercise.sets %></td>
+              <td><%= exercise.reps %></td>
+              <td><a href=<%= "/exercise/edit/" + exercise.id %>  class="btn btn-primary">Edit</a></td>
+              <td><a href=<%= "/exercise/delete/" + exercise.id %>  class="btn btn-primary">Delete</a></td>
+            </tr>
+          <% }) %>
+        </table>
+      <% } else { %>
+        <h2>There are no tasks to display.</h2>
+      <% } %>
+  </main>
+
+  <footer>
+    <p>&copy; <%= new Date().getFullYear() %> Your Fitness App</p>
+  </footer>
+</body>
+</html>

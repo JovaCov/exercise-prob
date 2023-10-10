@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  final-prod
+</head>
+<body class="container">
+
+<header>
+  Welcome
+</header>
+
+<main>
+  <div class="container">
+    <h1>Exercise project</h1>
+  
+  </div>
+  <section>
+    <h2>Register</h2>
+    <form id="regForm" action="/api/user/register" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="nameinput" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <h2>login</h2>
+    <form action="/api/user/login" method="post">
+      <div class="loginBox">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" require>
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" require>
+        <button type="submit">login</button>
+        
+      </div>
+
+    </form>
+  </section>
+  
+
+</main>
+
+<footer>
+    &copy; 2023 Exercise Tracker jc
+</footer>
+<script src="./index.js"></script>
+</body>
+</html>
